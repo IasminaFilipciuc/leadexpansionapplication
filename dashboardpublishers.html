@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" CONTENT="noindex, nofollow">
+
+    <title>Dashboard</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style  type="text/css">
+
+        .textcolor{
+            color:  #67a6de;
+        }
+        .textcolor:hover{
+            color:  #041e35;
+            border-bottom: 2px solid #67a6de;
+            cursor:pointer;
+        }
+   
+    </style>
+</head>
+
+
+<body>
+    <div id="wrapper">
+        <nav id="left_sidebar" class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div id="top" class="col-lg-12 d-flex justify-content-end py-2">
+                            <div id="identity" class="small text-left">
+                                <img src="images/logo_leadXpansion.png" alt="logo" width="100%" height="100%"/>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="active">
+                        <a href="dashboardpublishers.html"><i class="fa fa-th-large"></i> <span
+                                class="nav-label">Dashboard Publishers</span></a>
+                    </li>
+
+                    <li>
+                        <a href=""><i class="fa fa-table"></i> <span class="nav-label">My account</span><span
+                                class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="profilepublishers.html">Profiles</a></li>
+                            <li><a href="paymentpublishers.html">Payment</a></li>
+                            <li><a href="indexpublishers.html">Log out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="dashbard-1">
+            <div class="row wrapper border-bottom white-bg px-0">
+               
+                <div id="top" class="col-lg-10 d-flex justify-content-end py-3">
+                <nav class="col-sm-12 m-b-xs pl-2">
+                    <ul>
+                        <li class="item pr-5"><a id="identity" href="#"><b class="textcolor">Get offers</b></a></li>
+                        <li class="item pr-5"><a id="identity" href="#"><b class="textcolor">My offers</b></a></li>
+                        <li class="item pr-5"><a id="identity" href="#"><b class="textcolor">Reports</b></a></li>
+                    </ul>
+                </nav>
+                </div>
+
+                <div id="top" class="col-lg-2 d-flex justify-content-end py-3">
+                    <div id="identity" class="small text-right">
+                        <b>Welcome</b><br>
+                        <span id="loggedUserPublisher" class="textcolor"></span>
+                        <script>
+                            // self executing function here
+                            (function() {
+                                var loggerUserPublisher = document.getElementById("loggedUserPublisher");
+
+// Reading the value, which was store as "theValue"
+if (localStorage && 'usernameLoggedInPublisher' in localStorage) {
+  loggerUserPublisher.innerHTML = localStorage.usernameLoggedInPublisher;
+}else{
+    window.location.href="indexpublishers.html";
+}
+                            
+                            })();
+                            </script>
+                        
+                    </div>
+                    <i class="fa fa-2x fa-user-circle py-1 px-3"></i>
+                </div>
+               
+            </div>
+
+            <div class="row pt-5 animated fadeInRight">
+                <div class="col-lg-12">
+                    <div class="ibox ">
+                        <div class="ibox-title border-0">
+                            <h2>Campaigns</h2>
+                        </div>
+                        <div class="ibox-content content-table">
+                            
+                            <div class="row table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>New Campaigns</th>
+                                            <th>Category</th>
+                                            <th>Type</th>
+                                            <th>Payout </th>
+                                            <th>Currency</th>
+                                            <th>End date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="https://www.pharmanova.no/gurkemeie-k2-pluss.html">Gurkemeie K2 pluss (Norway)</a></td>
+                                            <td>Healthcare/Wellness</td>
+                                            <td>Campaigns</td>
+                                            <td>kr 150,00</td>
+                                            <td>NOK</td>
+                                            <td>None</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://dk.gnp.energy/cs">GNP - Get free Electricity all summer (Norway)</a></td>
+                                            <td>Electricity</td>
+                                            <td>Campaigns</td>
+                                            <td>kr 200,00</td>
+                                            <td>NOK</td>
+                                            <td>None</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://vendela.no/produkt/vendela-instant-glow/">Vendela Glow - Try for free (Norway)</a></td>
+                                            <td>Wellness</td>
+                                            <td>Campaigns</td>
+                                            <td>kr 70,00</td>
+                                            <td>NOK</td>
+                                            <td>None</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://smartlaanet.dk/">Smartlånet (Sweden)</a></td>
+                                            <td>Loan/Finance</td>
+                                            <td>Campaigns</td>
+                                            <td>kr 800,00</td>
+                                            <td>SEK</td>
+                                            <td>None</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://xn--favoritln-d3a.se/?transaction_id=102e7f9c5d54f9817f07a6e6b6bcab&affiliate_id=1007&affiliate_name=Adtraction&affiliate_publisher_id=&advertiser_id=1&affiliate_click_id=A6EF2993D8E558FB09BE8C8EE0F254858C7D7291&utm_source=affiliate&utm_medium=Adtraction&utm_campaign=Adtraction-1007&utm_term=1007&email={email}&mobile={mobile}&name={name}&loan_amount={loan_amount}&monthly_income={monthly_income}&postal_code={postal_code}&l={l}&o={o}&sf_id={sf_id}&state_id={state_id}">Favoritlån - Loan from 5000-600.000 (Sweden)</a></td>
+                                            <td>Loan/Finance</td>
+                                            <td>Campaigns</td>
+                                            <td>kr 2000,00</td>
+                                            <td>SEK</td>
+                                            <td>None</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://betakarotengold.no/?gclid=Cj0KCQjwn7j2BRDrARIsAHJkxmwk6l84lUXTmGQfHh6joG_ZZzneebZxTq8TUHBh7PnVooLaB42viBwaAhz0EALw_wcB&gclsrc=aw.ds">Preview	Betakaroten - Get the summer tan in Norway (Norway)</a></td>
+                                            <td>Healthcare/Wellness</td>
+                                            <td>Campaigns</td>
+                                            <td class="text-success">kr 110,00</td>
+                                            <td>NOK</td>
+                                            <td>None</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.banknorwegian.dk/L%C3%A5n/L%C3%A5n-Penge-Online?utm_source=google&utm_medium=cpc&utm_term=%2Bloan&utm_content=matchtype=b|network=g|placement=|adposition=|creative=233280991807|adgroupid=42927980522&utm_campaign=795730203&gclid=Cj0KCQjwn7j2BRDrARIsAHJkxmz0W2Kyzn76VS-jqE3ErRg2RbBKFltIe5B4XZC8nI6L6aDZKwhWlMUaAvlQEALw_wcB">UNO Finans - Loan up to 500.000 (Norway)</a></td>
+                                            <td>Loan/Finance</td>
+                                            <td>Campaigns</td>
+                                            <td class="text-success">kr 1850,00</td>
+                                            <td>NOK</td>
+                                            <td>None</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.efi.dk/">Iglo Selolje - The Optimal Omega 3 (Norway)</a></td>
+                                            <td>Healthcare/Wellness</td>
+                                            <td>Campaigns</td>
+                                            <td class="text-success">kr 110,00</td>
+                                            <td>NOK</td>
+                                            <td>None</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.daydose.com/">MAXD - Try Vitamin D for free (Sweden)</a></td>
+                                            <td>Healthcare/Wellness</td>
+                                            <td>Campaigns</td>
+                                            <td>kr 70,00</td>
+                                            <td>SEK</td>
+                                            <td>None</td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.dnb.com/">Dizolve - The green way to wash clothes (Sweden)</a></td>
+                                            <td>Batjroom Products</td>
+                                            <td>Campaigns</td>
+                                            <td class="text-success">kr 100,00</td>
+                                            <td>SEK</td>
+                                            <td>None</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Flot -->
+    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="js/plugins/flot/jquery.flot.symbol.js"></script>
+    <script src="js/plugins/flot/jquery.flot.time.js"></script>
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/demo/peity-demo.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- Jvectormap -->
+    <script src="js/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+
+    <!-- EayPIE -->
+    <script src="js/plugins/easypiechart/jquery.easypiechart.js"></script>
+
+    <!-- Sparkline -->
+    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Sparkline demo data  -->
+    <script src="js/demo/sparkline-demo.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" CONTENT="noindex, nofollow">
+
+    <title>Payment</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style  type="text/css">
+
+
+.download{
+           color: #67a6de;
+           border-color: #67a6de;
+        }
+        
+        .textcolor{
+            color:  #67a6de;
+        }
+        .textcolor:hover{
+            color:  #041e35;
+            border-bottom: 2px solid #67a6de;
+            cursor:pointer;
+        }
+   
+    </style>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav id="left_sidebar" class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div id="top" class="col-lg-12 d-flex justify-content-end py-2">
+                            <div id="identity" class="small text-left">
+                                <img src="images/logo_leadXpansion.png" alt="logo" width="100%" height="100%"/>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="dashboardpublishers.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard Publishers</span></li>
+                    
+                    <li class="active">
+                        <a href="#"><i class="fa fa-table"></i> <span class="nav-label">My account</span><span
+                                class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="profilepublishers.html">Profile</a></li>
+                            <li class="active"><a href="paymentpublishers.html">Payments</a></li>
+                            <li><a href="indexpublishers.html">Log out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="dashbard-1">
+            <div class="row wrapper border-bottom white-bg px-0">
+               
+                <div id="top" class="col-lg-10 d-flex justify-content-end py-3">
+                <nav class="col-sm-12 m-b-xs pl-2">
+                    <ul>
+                        <li class="item pr-5"><a id="identity" href="#"><b class="textcolor">Get offers</b></a></li>
+                        <li class="item pr-5"><a id="identity" href="#"><b class="textcolor">My offers</b></a></li>
+                        <li class="item pr-5"><a id="identity" href="#"><b class="textcolor">Reports</b></a></li>
+                    </ul>
+                </nav>
+                </div>
+
+                <div id="top" class="col-lg-2 d-flex justify-content-end py-3">
+                    <div id="identity" class="small text-right">
+                        <b>Welcome</b><br>
+                        <span id="loggedUserPublisher" class="textcolor"></span>
+                        <script>
+                            // self executing function here
+                            (function() {
+                                var loggerUserPublisher = document.getElementById("loggedUserPublisher");
+
+// Reading the value, which was store as "theValue"
+if (localStorage && 'usernameLoggedInPublisher' in localStorage) {
+  loggerUserPublisher.innerHTML = localStorage.usernameLoggedInPublisher;
+}else{
+    window.location.href="indexpublishers.html";
+}
+                            
+                            })();
+                            </script>
+                        
+                    </div>
+                    <i class="fa fa-2x fa-user-circle py-1 px-3"></i>
+                </div>
+               
+            </div>
+
+    
+           
+                       <div class="row pt-5 animated fadeInRight">
+                <div class="col-lg-12">
+                    <div class="ibox ">
+                        <div class="ibox-title border-0">
+                            <h3>Payments review</h3>
+                        </div>
+                        <div class="ibox-content content-table">
+                        
+                            <div class="row">
+                                <div class="col-lg-9">
+                             <h4>Payment Details</h4>
+                                          
+                             <img class="mx-auto img-fluid mastercard" src="img/COMPONENTS/mastercard-logo.png" alt="" />
+                                     
+                                          </div>
+                                <div class="col-lg-3">
+                                <a href="">Change payment method</a>
+                                    </div>              
+                            </div>
+                            
+                            <div class="row">
+                             <button class="btn btn-primary px-4 my-3 float-left m-t-n-xs"
+                                type="submit"><strong>Save</strong></button> 
+                                
+                            </div>
+                            
+                          
+                            <div class="receipts">
+                            <h4>Receipts</h4>
+                               
+                            <p>Here you'll find receipts for all payment charges made relating to subscriptions.</p>
+                           
+                            </div>
+                           
+                            <div class="row table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Type</th>
+                                            <th>Total</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2020-01-30</td>
+                                            <td>charge</td>
+                                            <td>0 DKK</td>
+                                            <td><button class="download" type="submit">Download</button></td>
+                                        </tr>
+                                        
+                                         <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                       
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <script src="js/plugins/dataTables/datatables.min.js"></script>
+    <script src="js/plugins/dataTables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- Page-Level Scripts -->
+    <script>
+        $(document).ready(function () {
+            $('.dataTables-example').DataTable({
+                pageLength: 25,
+                responsive: true,
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [{
+                        extend: 'copy'
+                    },
+                    {
+                        extend: 'csv'
+                    },
+                    {
+                        extend: 'excel',
+                        title: 'ExampleFile'
+                    },
+                    {
+                        extend: 'pdf',
+                        title: 'ExampleFile'
+                    },
+
+                    {
+                        extend: 'print',
+                        customize: function (win) {
+                            $(win.document.body).addClass('white-bg');
+                            $(win.document.body).css('font-size', '10px');
+
+                            $(win.document.body).find('table')
+                                .addClass('compact')
+                                .css('font-size', 'inherit');
+                        }
+                    }
+                ]
+
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
